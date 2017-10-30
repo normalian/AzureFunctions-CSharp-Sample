@@ -40,18 +40,31 @@ At first, create Azure Function in Azure portal like below.
 ![01-Create-AzureFunctions.PNG](img/01-Create-AzureFunctions.PNG "01-Create-AzureFunctions.PNG")
 
 Setup your Azure Functions in Azure portal. Choose "Application settings".
+
 ![05-Setup-AzureFunctions.PNG](img/05-Setup-AzureFunctions.PNG "05-Setup-AzureFunctions.PNG")
 
 Setup "Application settings" section in "Application settings" tab. Setup "Azurefunctions822d656e_CONNECTION" and "Function_FQDN" variables in the tab.
+
 ![06-Setup-AzureFunctions.PNG](img/06-Setup-AzureFunctions.PNG "06-Setup-AzureFunctions.PNG")
 
 Setup "Connection strings" section in "Application settings" tab. Setup "SQLDB_CONNECTION" variables in the tab.
+
 ![07-Setup-AzureFunctions.PNG](img/07-Setup-AzureFunctions.PNG "07-Setup-AzureFunctions.PNG")
 
 Publish this application with Visual Studio following below images.
+
 ![02-Publish-AzureFunctions.PNG](img/02-Publish-AzureFunctions.PNG "02-Publish-AzureFunctions.PNG")
 ![03-Publish-AzureFunctions.PNG](img/03-Publish-AzureFunctions.PNG "03-Publish-AzureFunctions.PNG")
 ![04-Publish-AzureFunctions.PNG](img/04-Publish-AzureFunctions.PNG "04-Publish-AzureFunctions.PNG")
+
+And create a SQL table in your SQL Database using "AzureFunctions-CSharp-Sample.git\AzureFunctions-Sample-DDL.sql" if it still doesn't exist.
+
+For confirming this applicaion behavior, please refer below.
+- Put queue messages into your "myqueue-items" queue of your Azure Storage. 
+- Access "SQLDBTimerTrigger" function in your Azure Functions, and press "Run" button. You can watch logs in bottom. Please read "SQLDBTimerTrigger.cs" for detail.
+
+![08-Execute-AzureFunctions.PNG](img/08-Execute-AzureFunctions.PNG "08-Execute-AzureFunctions.PNG")
+
 
 
 ## Trouble shooting
